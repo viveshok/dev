@@ -9,8 +9,10 @@ RUN yum -y install sudo vim git tmux
 
 USER abeaulne
 
-ADD ../.vimrc /home/abeaulne
-ADD ../.tmux.conf /home/abeaulne
+ADD .vimrc /home/abeaulne/
+ADD .tmux.conf /home/abeaulne/
+
+WORKDIR /home/abeaulne/
 
 CMD [ "/bin/bash" ]
 
