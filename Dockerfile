@@ -4,6 +4,7 @@ MAINTAINER Alexandre Beaulne <alexandre.beaulne@gmail.com>
 
 RUN adduser abeaulne
 RUN usermod -aG wheel abeaulne
+RUN echo "abeaulne:abeaulne" | chpasspwd
 
 RUN yum -y install sudo vim git tmux
 
