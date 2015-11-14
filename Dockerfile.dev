@@ -6,9 +6,12 @@ RUN adduser abeaulne
 RUN usermod -aG wheel abeaulne
 RUN echo "abeaulne:abeaulne" | chpasswd
 
-RUN yum -y install sudo vim git tmux
+RUN yum -y install sudo vim git tmux wget zip unzip bzip2 net-tools
 
 USER abeaulne
+
+RUN git config --global user.name "Alexandre Beaulne"
+RUN git config --global user.email "alexandre dot beaulne at gmail dot com"
 
 ADD .vimrc /home/abeaulne/
 ADD .tmux.conf /home/abeaulne/

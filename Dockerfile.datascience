@@ -1,0 +1,27 @@
+
+FROM centos:latest
+MAINTAINER Alexandre Beaulne <alexandre.beaulne@gmail.com>
+
+RUN adduser abeaulne
+RUN usermod -aG wheel abeaulne
+RUN echo "abeaulne:abeaulne" | chpasswd
+
+RUN yum -y install sudo vim git tmux wget zip unzip bzip2 net-tools
+
+USER abeaulne
+
+RUN git config --global user.name "Alexandre Beaulne"
+RUN git config --global user.email "alexandre dot beaulne at gmail dot com"
+
+ADD .vimrc /home/abeaulne/
+ADD .tmux.conf /home/abeaulne/
+ADD Anaconda3-2.4.0-Linux-x86_64.sh /home/abeaulne/
+
+WORKDIR /home/abeaulne/
+
+RUN bash /home/abeaulne/Anaconda3-2.4.0-Linux-x86_64.sh -b
+
+RUN /home/abeaulne/anaconda3/bin/conda create --name py27 python=2.7 anaconda
+
+CMD [ "/bin/bash" ]
+

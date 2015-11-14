@@ -305,7 +305,72 @@
                     <td>netstat -nptl</td>
                     <td>List all TCP opened ports on localhost in listen mode</td>
                 </tr>
-
+            </table>
+        <h1>docker</h1>
+            <table border="1">
+                <tr>
+                    <td>docker build -f Dockerfile.datascience --tag="abeaulne/datascience" .</td>
+                    <td>build an image from specified Dockerfile</td>
+                </tr>
+                <tr>
+                    <td>docker login</td>
+                    <td>login to dockerhub</td>
+                </tr>
+                <tr>
+                    <td>docker push abeaulne/datascience</td>
+                    <td>push an image to dockerhub</td>
+                </tr>
+                <tr>
+                    <td>docker run -i -t IMAGE /bin/bash</td>
+                    <td>launch a container in interative bash mode</td>
+                </tr>
+                <tr>
+                    <td>docker images</td>
+                    <td>list local images</td>
+                </tr>
+                <tr>
+                    <td>docker ps -a</td>
+                    <td>list local containers</td>
+                </tr>
+                <tr>
+                    <td>docker ps -aq | xargs docker rm</td>
+                    <td>delete all local containers</td>
+                </tr>
+                <tr>
+                    <td>docker rmi IMAGE</td>
+                    <td>delete an image</td>
+                </tr>
+                <tr>
+                    <td>Ctrl + p + Ctrl + q</td>
+                    <td>if container was ran with docker run -i -t, then detach</td>
+                </tr>
+                <tr>
+                    <td>docker attach CONTAINER</td>
+                    <td>attach to running container</td>
+                </tr>
+            </table>
+        <h1>Anaconda</h1>
+            <table border="1">
+                <tr>
+                    <td>conda env list</td>
+                    <td>list environments</td>
+                </tr>
+                <tr>
+                    <td>conda create --name py27 python=2.7 anaconda</td>
+                    <td>create an python 2.7 env called py27</td>
+                </tr>
+                <tr>
+                    <td>conda remove --name NAME --all</td>
+                    <td>remove an env</td>
+                </tr>
+                <tr>
+                    <td>source activate NAME</td>
+                    <td>change to (activate) an env</td>
+                </tr>
+                <tr>
+                    <td>source deactivate</td>
+                    <td>deactivate current env</td>
+                </tr>
             </table>
     </body>
 </html>

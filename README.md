@@ -10,12 +10,3 @@ to your gmail account
 * cheatsheet.html is yet another vim / xmonad / shell cheatsheet
 * setup.sh adjust my laptop xmonad configuration to an external monitor
 
-## docker howto build, distribute and run image/container from dockerfile
-~~~~
-$ cd dev/
-$ docker build --tag="abeaulne/abeaulne" .
-$ docker login
-$ docker push abeaulne/abeaulne
-$ docker run -i -t abeaulne/abeaulne
-~~~~
-
