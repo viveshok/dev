@@ -2,11 +2,16 @@
 FROM centos:latest
 MAINTAINER Alexandre Beaulne <alexandre.beaulne@gmail.com>
 
-RUN adduser abeaulne
+RUN yum -y install sudo vim git tmux make wget zip unzip bzip2 net-tools gcc libxslt-devel libxml2-devel
+
+# install python 3
+RUN wget http://ftp.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+RUN tar xf Python-3.4.3.tar.xz
+RUN cd Python-3.4.3 && ./configure && make && make altinstall
+
+RUN adduser -m abeaulne
 RUN usermod -aG wheel abeaulne
 RUN echo "abeaulne:abeaulne" | chpasswd
-
-RUN yum -y install sudo vim git tmux wget zip unzip bzip2 net-tools
 
 USER abeaulne
 
