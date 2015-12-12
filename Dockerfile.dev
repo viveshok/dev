@@ -5,7 +5,8 @@ MAINTAINER Alexandre Beaulne <alexandre.beaulne@gmail.com>
 RUN yum -y update
 RUN yum groupinstall -y development
 RUN yum -y install zlib-dev openssl-devel sqlite-devel bzip2-devel
-RUN yum -y install sudo vim git tmux make wget zip unzip net-tools gcc libxslt-devel libxml2-devel
+RUN yum -y install sudo vim git tmux make wget zip unzip
+RUN yum -y install net-tools gcc libxslt-devel libxml2-devel ncurses-devel
 
 # install pip for python 2
 RUN wget https://bootstrap.pypa.io/ez_setup.py -O - | python
@@ -19,6 +20,7 @@ RUN cd Python-3.5.0 && ./configure && make && make altinstall
 # install pip for python 3
 RUN wget https://bootstrap.pypa.io/ez_setup.py -O - | python3.5
 RUN curl https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py | python3.5 -
+RUN ln -s /usr/local/bin/pip3.5 /usr/bin/pip3.5
 
 RUN adduser -m abeaulne
 RUN usermod -aG wheel abeaulne

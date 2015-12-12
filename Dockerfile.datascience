@@ -3,7 +3,10 @@ FROM centos:latest
 MAINTAINER Alexandre Beaulne <alexandre.beaulne@gmail.com>
 
 RUN yum -y update
-RUN yum -y install sudo vim git tmux make wget zip unzip bzip2 net-tools gcc libxslt-devel libxml2-devel
+RUN yum groupinstall -y development
+RUN yum -y install zlib-dev openssl-devel sqlite-devel bzip2-devel
+RUN yum -y install sudo vim git tmux make wget zip unzip
+RUN yum -y install net-tools gcc libxslt-devel libxml2-devel ncurses-devel
 
 RUN adduser -m abeaulne
 RUN usermod -aG wheel abeaulne
