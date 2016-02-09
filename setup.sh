@@ -6,10 +6,10 @@ setxkbmap -option caps:swapescape
 ## set blue background
 xsetroot -solid midnightblue
 
-#
-## home setup
-#xrandr --output VGA1 --auto --right-of LVDS1
-#
+
+# home setup
+xrandr --output VGA1 --auto --right-of LVDS1
+
 ## office setup
 ### set up first screen
 #xrandr --newmode "2560x1600_60"  348.16  2560 2752 3032 3504  1600 1601 1604 1656  -HSync +Vsync

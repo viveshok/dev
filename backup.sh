@@ -15,3 +15,5 @@ sudo umount /media/external # before you disconnect
 
 rsync -avr --delete /home/abeaulne/data abeaulne@128.199.101.40:/home/abeaulne
 
+aws s3 sync data s3://abeaulne-backup/data
+
