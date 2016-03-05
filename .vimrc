@@ -23,7 +23,6 @@ filetype indent plugin on
 " Enable syntax highlighting
 syntax on
 
-
 "------------------------------------------------------------
 " Must have options {{{1
 "
@@ -64,7 +63,6 @@ set hlsearch
 " such, it may be a good idea to disable them and use the securemodelines
 " script, <http://www.vim.org/scripts/script.php?script_id=1876>.
 " set nomodeline
-
 
 "------------------------------------------------------------
 " Usability options {{{1
@@ -125,7 +123,6 @@ set notimeout ttimeout ttimeoutlen=200
 " Use <F11> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F11>
 
-
 "------------------------------------------------------------
 " Indentation options {{{1
 "
@@ -142,7 +139,6 @@ set expandtab
 "set shiftwidth=2
 "set tabstop=2
 
-
 "------------------------------------------------------------
 " Mappings {{{1
 "
@@ -156,12 +152,12 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-
 "------------------------------------------------------------
 
 " Python specific settings
-autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab 
+autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=100 smarttab expandtab
 
+" Racket specific settings
 if has("autocmd")
     au BufReadPost *.rkt,*.rktl set filetype=scheme
 endif
@@ -185,5 +181,6 @@ set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
+" use jk for escape
 :imap jk <Esc>
 
