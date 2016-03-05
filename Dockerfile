@@ -18,8 +18,9 @@ WORKDIR /home/user/
 
 ADD .vimrc /home/user/
 ADD .tmux.conf /home/user/
+ADD Anaconda3-2.5.0-Linux-x86_64.sh /home/user/
 
-RUN bash Anaconda3-2.5.0-Linux-x86_64.sh -b
+RUN bash /home/user/Anaconda3-2.5.0-Linux-x86_64.sh -b
 RUN echo "export PATH=\"/home/user/anaconda3/bin:$PATH\"" >> /home/user/.bashrc
 
 RUN /home/user/anaconda3/bin/conda create --yes --name py27 python=2.7 anaconda
