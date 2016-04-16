@@ -13,5 +13,9 @@ sudo umount /media/external # before you disconnect
 
 # for amazon S3
 
-aws s3 sync data s3://abeaulne-backup/data
+aws s3 sync --dryrun data s3://abeaulne-backup/data --size-only
+
+then
+
+aws s3 sync data s3://abeaulne-backup/data --size-only
 
