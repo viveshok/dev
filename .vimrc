@@ -155,7 +155,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 
 " Python specific settings
-autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=100 smarttab expandtab
+autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=80 smarttab expandtab
 
 " Racket specific settings
 if has("autocmd")
