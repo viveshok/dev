@@ -76,7 +76,7 @@ def parser(argv):
         output["dirs_file"] = argv[0]
         output["address"] = argv[1] if '@' in argv[1] else argv[1]+"@gmail.com"
         output["password"] = argv[2]
-    
+
     return output
 
 def getPaths(dirs_file):
@@ -138,7 +138,7 @@ def zipFiles(archivePath, paths):
 
     archive.close()
     return text
- 
+
 def sendMail(address, password, recipient, body, subject="New Mail", attachment=""):
     """ Sends an email """
 
@@ -156,10 +156,10 @@ def sendMail(address, password, recipient, body, subject="New Mail", attachment=
     part.add_header("Content-Disposition", "attachment; filename=%s" % os.path.basename(attachment))
     msg.attach(part)
 
-    server = smtplib.SMTP('smtp.gmail.com:587')  
-    server.starttls()  
-    server.login(address, password)  
-    server.sendmail(address, recipient, msg.as_string())  
+    server = smtplib.SMTP('smtp.gmail.com:587')
+    server.starttls()
+    server.login(address, password)
+    server.sendmail(address, recipient, msg.as_string())
     server.quit()
 
 if __name__ == "__main__":
@@ -187,4 +187,4 @@ if __name__ == "__main__":
         os.remove(archivePath)
 
         print "Backup completed - email sent to " + credentials["address"]
- 
+
