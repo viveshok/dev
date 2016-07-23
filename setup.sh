@@ -6,7 +6,6 @@ setxkbmap -option caps:swapescape
 ## set blue background
 xsetroot -solid midnightblue
 
-
 # home setup
 xrandr --output VGA1 --auto --right-of LVDS1
 
