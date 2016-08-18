@@ -19,3 +19,6 @@ pip install awscli
 # tmux
 brew install tmux
 
+# amethyst
+brew cask install amethyst
+
