@@ -7,8 +7,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # gpg
 brew install gnupg
 
-# microsoft remote desktop
-
 # anaconda python
 bash Anaconda3-4.1.0-MacOSX-x86_64.sh -b
 echo 'export PATH="/Users/alexandrebeaulne/anaconda3/bin:$PATH"' >> ~/.bash_profile
@@ -21,4 +19,10 @@ brew install tmux
 
 # amethyst
 brew cask install amethyst
+
+# microsoft remote desktop
+
+# Eclipse related stuff
+# tunnelblick
+# hipchat client
 
