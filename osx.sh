@@ -7,9 +7,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # gpg
 brew install gnupg
 
-# anaconda python
-bash Anaconda3-4.1.0-MacOSX-x86_64.sh -b
-echo 'export PATH="/Users/alexandrebeaulne/anaconda3/bin:$PATH"' >> ~/.bash_profile
+# Docker
 
 # aws client
 pip install awscli
