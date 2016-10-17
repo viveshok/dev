@@ -20,6 +20,9 @@ brew install tmux
 # amethyst
 brew cask install amethyst
 
+# watch command line util
+brew install watch
+
 # microsoft remote desktop
 
 # Eclipse related stuff
