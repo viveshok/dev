@@ -17,6 +17,9 @@ sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 # tmux
 brew install tmux
 
+# htop
+brew install htop
+
 # amethyst
 brew cask install amethyst
 
