@@ -7,6 +7,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # gpg
 brew install gnupg
 
+# for command line tools
+xcode-select --install
+
 # Docker
 
 # aws client
