@@ -165,10 +165,6 @@ endif
 " start scrolling before cursor reaches top or bottom of screen
 set scrolloff=12
 
-" Show trailing whitespace
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:match ExtraWhitespace /\s\+$/
-
 " line endings?
 set fileformat=unix
 set fileformats=unix,dos
@@ -183,4 +179,9 @@ syntax on
 
 " use jk for escape
 :imap jk <Esc>
+
+" Show trailing whitespace *NEED TO BE AFTER ANY CALLS TO colorscheme command*
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
+
 
