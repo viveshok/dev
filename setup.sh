@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # swap escape and caps lock key
-setxkbmap -option caps:swapescape
+#setxkbmap -option caps:swapescape
+# I don't use this anymore
 
 ## set blue background
 xsetroot -solid midnightblue
 
 # home setup
-xrandr --output VGA1 --auto --right-of LVDS1
+#xrandr --output VGA1 --auto --right-of LVDS1
 
 ## office setup
 ### set up first screen
