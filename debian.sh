@@ -8,6 +8,9 @@ sudo apt-get install tmux
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
+echo 'pinentry-program /usr/bin/pinentry-curses' >> ~/.gnupg/gpg-agent.conf
+gpg-connect-agent reloadagent /bye
+
 wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
 bash Anaconda3-4.3.1-Linux-x86_64.sh -b
 echo 'export PATH="/home/abeaulne/anaconda3/bin:$PATH"' >> ~/.bashrc
