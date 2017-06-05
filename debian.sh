@@ -5,10 +5,6 @@ sudo apt-get install chromium-browser
 sudo apt-get install git
 sudo apt-get install vim
 sudo apt-get install tmux
-sudo apt-get install dnsmasq
-
-sudo echo -e 'server=8.8.8.8\nserver=8.8.4.4' >> /etc/dnsmasq.conf
-# sudo service network-manager restart
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
