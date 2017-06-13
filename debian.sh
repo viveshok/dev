@@ -6,6 +6,7 @@ sudo apt-get install git
 sudo apt-get install vim
 sudo apt-get install tmux
 sudo apt-get install scrot
+sudo apt-get install curl
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
@@ -17,3 +18,14 @@ bash Anaconda3-4.3.1-Linux-x86_64.sh -b
 echo 'export PATH="/home/abeaulne/anaconda3/bin:$PATH"' >> ~/.bashrc
 
 pip install awscli
+
+# install docker
+sudo apt-get -y install apt-transport-https ca-certificates
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+RELEASE=$(lsb_release -cs)
+REPO="deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE edge"
+sudo add-apt-repository "$REPO"
+sudo apt-get update
+sudo apt-get -y install docker-ce
+sudo docker run hello-world
+
