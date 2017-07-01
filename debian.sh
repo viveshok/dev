@@ -29,3 +29,9 @@ sudo apt-get update
 sudo apt-get -y install docker-ce
 sudo docker run hello-world
 
+## list wifi networks:
+# $ nmcli dev wifi list
+## connect to a wifi network
+# $ nmcli dev wifi connect <NETWORK NAME/SSID> password <PASSWORD>
+## show status:
+# $ nmcli c show
