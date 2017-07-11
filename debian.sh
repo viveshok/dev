@@ -37,5 +37,7 @@ sudo docker run hello-world
 # $ nmcli dev wifi connect <NETWORK NAME/SSID> password <PASSWORD>
 ## show status:
 # $ nmcli c show
+## delete an existing connection
+# $ nmcli connection delete <NETWORK NAME/SSID>
 ## restart network manager
 # $ sudo service network-manager restart
