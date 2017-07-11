@@ -1,6 +1,7 @@
 
 # small script to bootstrap a Debian desktop
 
+
 sudo apt-get install chromium-browser
 sudo apt-get install git
 sudo apt-get install vim
@@ -36,3 +37,5 @@ sudo docker run hello-world
 # $ nmcli dev wifi connect <NETWORK NAME/SSID> password <PASSWORD>
 ## show status:
 # $ nmcli c show
+## restart network manager
+# $ sudo service network-manager restart
