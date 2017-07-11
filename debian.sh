@@ -7,6 +7,7 @@ sudo apt-get install vim
 sudo apt-get install tmux
 sudo apt-get install scrot
 sudo apt-get install curl
+sudo apt-get install acpi
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
