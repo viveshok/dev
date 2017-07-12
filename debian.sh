@@ -41,3 +41,7 @@ sudo docker run hello-world
 # $ nmcli connection delete <NETWORK NAME/SSID>
 ## restart network manager
 # $ sudo service network-manager restart
+
+## change keyboard layout
+# $ setxkbmap fr
+# $ setxkbmap us
