@@ -15,8 +15,12 @@ to your gmail account
 ```
 $ # list wifi networks:
 $ nmcli dev wifi list
-$ # connect to a wifi network
+$ # connect to a new wifi network
 $ nmcli dev wifi connect <NETWORK NAME/SSID> password <PASSWORD>
+$ # connect to an existing wifi network
+$ nmcli connection up id <NETWORK NAME/SSID>
+$ # disconnect from an existing wifi network
+$ nmcli connection down id <NETWORK NAME/SSID>
 $ # show status:
 $ nmcli c show
 $ # delete an existing connection
