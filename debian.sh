@@ -8,7 +8,8 @@ sudo apt-get install vim
 sudo apt-get install tmux
 sudo apt-get install scrot
 sudo apt-get install curl
-sudo apt-get install acpi
+sudo apt-get install acpi # check battery power
+sudo apt-get install xserver-xorg-input-mtrack # macbook touchpad
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
