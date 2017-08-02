@@ -9,17 +9,16 @@ sudo apt-get install tmux
 sudo apt-get install scrot
 sudo apt-get install curl
 sudo apt-get install acpi # check battery power
-sudo apt-get install xserver-xorg-input-mtrack # macbook touchpad
+
+# macbook touchpad
+sudo apt-get autoremove xserver-xorg-input-synaptics
+sudo apt-get install xserver-xorg-input-mtrack
+cat mtrack.conf >> /etc/X11/xorg.conf
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
-# Macbook touchpad
-sudo mkdir /etc/X11/xorg.conf.d/
-cp 60-synaptics.conf /etc/X11/xorg.conf.d/
-
 echo 'pinentry-program /usr/bin/pinentry-curses' >> ~/.gnupg/gpg-agent.conf
 gpg-connect-agent reloadagent /bye
-
 
 # Anaconda
 wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
