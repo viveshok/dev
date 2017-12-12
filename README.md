@@ -43,3 +43,18 @@ $ setxkbmap fr
 $ setxkbmap us
 ```
 
+## formatting usb stick
+```
+$ lsblk
+$ sudo mkfs -t vfat /dev/sdc1
+```
+
+## mounting usb stick
+
+```
+$ lsblk
+$ sudo mkdir /media/usb/
+$ sudo mount /dev/sdb1 /media/usb
+$ sudo umount /media/usb
+```
+
