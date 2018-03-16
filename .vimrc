@@ -154,9 +154,6 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 "------------------------------------------------------------
 
-" Python specific settings
-autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=80 smarttab expandtab
-
 " Racket specific settings
 if has("autocmd")
     au BufReadPost *.rkt,*.rktl set filetype=scheme
@@ -183,6 +180,11 @@ syntax on
 syntax enable
 set background=dark
 colorscheme solarized
+
+" Python specific settings
+autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=80 smarttab expandtab
+
+highlight ColorColumn ctermbg=1
 
 " Show trailing whitespace *NEED TO BE AFTER ANY CALLS TO colorscheme command*
 highlight ExtraWhitespace ctermbg=red guibg=red
