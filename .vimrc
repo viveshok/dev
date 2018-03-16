@@ -180,6 +180,10 @@ syntax on
 " use jk for escape
 :imap jk <Esc>
 
+syntax enable
+set background=dark
+colorscheme solarized
+
 " Show trailing whitespace *NEED TO BE AFTER ANY CALLS TO colorscheme command*
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/

@@ -58,3 +58,9 @@ $ sudo mount /dev/sdb1 /media/usb
 $ sudo umount /media/usb
 ```
 
+## install vim colorscheme
+```
+$ mkdir .vim/colors
+$ cp dev/solarized.vim .vim/colors
+```
+
