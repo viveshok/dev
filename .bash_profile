@@ -7,5 +7,3 @@ export PS1="\W $ "
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export HISTFILESIZE=100000
-
