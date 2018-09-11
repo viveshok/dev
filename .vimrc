@@ -166,6 +166,8 @@ set scrolloff=12
 set fileformat=unix
 set fileformats=unix,dos
 
+set tabpagemax=50
+
 " Golang syntax highlighting
 " Clear filetype flags before changing runtimepath to force Vim to reload them.
 filetype off
