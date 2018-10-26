@@ -4,5 +4,5 @@
 xsetroot -solid midnightblue
 
 # reduce macbook screen resolution
-xrandr --output eDP --mode "1920x1200"
+xrandr --output eDP --mode "1600x1200"
 
