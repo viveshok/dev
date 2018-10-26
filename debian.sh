@@ -1,7 +1,6 @@
 
 # small script to bootstrap a Debian desktop
 
-
 sudo apt-get install chromium-browser
 sudo apt-get install git
 sudo apt-get install vim
@@ -9,11 +8,6 @@ sudo apt-get install tmux
 sudo apt-get install scrot
 sudo apt-get install curl
 sudo apt-get install acpi # check battery power
-
-# macbook touchpad
-sudo apt-get autoremove xserver-xorg-input-synaptics
-sudo apt-get install xserver-xorg-input-mtrack
-cat mtrack.conf >> /etc/X11/xorg.conf
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
