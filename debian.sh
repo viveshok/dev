@@ -5,8 +5,9 @@ sudo apt-get install chromium-browser
 sudo apt-get install git
 sudo apt-get install vim
 sudo apt-get install tmux
-sudo apt-get install scrot
 sudo apt-get install curl
+sudo apt-get install scrot # screenshots
+sudo apt-get install mosh # mobile shell
 sudo apt-get install acpi # check battery power
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
