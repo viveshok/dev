@@ -32,7 +32,6 @@ $ sudo service network-manager restart
 ## launching VPN
 
 ```
-$ cd ~/ipvanish
 $ sudo openvpn --config desired_config.ovpn
 ```
 
