@@ -29,10 +29,12 @@ $ # restart network manager
 $ sudo service network-manager restart
 ```
 
-## launching VPN
+## restarting VPN
 
 ```
-$ sudo openvpn --config desired_config.ovpn
+$ sudo systemctl stop openvpn@client
+$ sudo systemctl start openvpn@client
+$ sudo systemctl status openvpn@client
 ```
 
 ## changing keyboard layout
