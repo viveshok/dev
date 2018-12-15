@@ -10,9 +10,6 @@ sudo apt-get install scrot # screenshots
 sudo apt-get install mosh # mobile shell
 sudo apt-get install acpi # check battery power
 sudo apt-get install rlwrap # rlwrap runs the specified command, intercepting user input in order to provide readline's line editing, persistent history and completion
-sudo apt-get install mailutils
-
-#sudo dpkg-reconfigure postfix
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
