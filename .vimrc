@@ -179,6 +179,10 @@ syntax on
 " use jk for escape
 :imap jk <Esc>
 
+" bash like tab file completion
+set wildmode=longest,list,full
+set wildmenu
+
 " Python specific settings
 autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=80 smarttab expandtab
 
