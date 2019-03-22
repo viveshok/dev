@@ -73,8 +73,8 @@ set hlsearch
 " use is very much a personal preference, but they are harmless.
 
 " Use case insensitive search, except when using capital letters
-set ignorecase
-set smartcase
+" set ignorecase
+" set smartcase
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
@@ -195,4 +195,8 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" Automatically re-read a file if it has changed 'underneath' the editor, e.g.
+" because of Git commands
+set autoread
 
