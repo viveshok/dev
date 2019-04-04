@@ -44,6 +44,12 @@ $ setxkbmap fr
 $ setxkbmap us
 ```
 
+## Reset trackpad
+
+```
+$ sudo modprobe -r psmouse
+```
+
 ## formatting usb stick
 ```
 $ lsblk
