@@ -29,7 +29,22 @@ $ # restart network manager
 $ sudo service network-manager restart
 ```
 
-## restarting VPN
+## setup OpenVPN
+
+```
+$ sudo vim /etc/default/openvpn
+:%s/#AUTOSTART="all"/AUTOSTART="all"/g
+$ sudo cp /location/whereYouDownloadedConfigfilesTo/Germany.ovpn /etc/openvpn/client.conf
+$ sudo vim /etc/openvpn/client.conf
+:%s/auth-user-pass/auth-user-pass pass/g
+$ sudo vim /etc/openvpn/pass  # username first line, password second line
+$ sudo chmod 400 /etc/openvpn/pass
+$ sudo systemctl enable openvpn@client.service
+$ sudo systemctl daemon-reload
+$ sudo service openvpn@client start
+```
+
+## restarting OpenVPN
 
 ```
 $ sudo systemctl stop openvpn@client
