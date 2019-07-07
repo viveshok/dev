@@ -111,7 +111,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH="/home/abeaulne/anaconda3/bin:$PATH"
+export PATH="/home/abeaulne/miniconda3/bin:$PATH"
 source /home/abeaulne/.bash_profile
 PATH=$PATH:$HOME/bin
 MANPATH=$MANPATH:$HOME/share/man
