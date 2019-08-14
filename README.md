@@ -1,14 +1,7 @@
-# dev
-Miscellaneous configs, script and utils for my DEV environment
 
-* latexthat.sh <file.tex> triple-compile file.tex to get bibliography and
-in-document references straight, then clean the destination folder of scruff
-files and finally open the resulting PDF with evince
-* backup.py picks files of predefined extensions in predefined directories
-(and their subdirectories), zips them and finally sends the zipped archive
-to your gmail account
-* cheatsheet.html is yet another vim / xmonad / shell cheatsheet
-* setup.sh adjust my laptop xmonad configuration to an external monitor
+# dev
+
+Miscellaneous configs, script and utils for my DEV environment
 
 ## network manager on debian
 
@@ -59,12 +52,6 @@ $ setxkbmap fr
 $ setxkbmap us
 ```
 
-## Reset trackpad
-
-```
-$ sudo modprobe -r psmouse
-```
-
 ## formatting usb stick
 ```
 $ lsblk
@@ -80,7 +67,44 @@ $ sudo mount /dev/sdb1 /media/usb
 $ sudo umount /media/usb
 ```
 
-# joining PDFs
+## joining PDFs
 ```
 $ gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=finished.pdf file1.pdf file2.pdf
+```
+
+## miscellaneous bash
+```
+$ find . -name "*.pyc" -delete # remove all files in subdirectories with extension pyc
+$ sudo shutdown -time now # shutdown computer
+$ ln -s real_path sym_path # create symbolic link
+$ cat /proc/cpuinfo # find out about the machine CPUs
+$ cat /proc/meminfo # find out about the machine RAM
+$ df -h # get disk usage
+$ du -h filename # get file or directory size
+$ sudo modprobe -r psmouse # reset laptop trackpad
+```
+
+## Docker
+```
+$ docker build -f Dockerfile.datascience --tag="abeaulne/datascience" . # build an image from specified Dockerfile
+$ docker login # login to dockerhub
+$ docker push abeaulne/datascience # push an image to dockerhub
+$ docker run -i -t IMAGE /bin/bash # launch a container in interative bash mode
+$ docker stop CONTAINER # stop container
+$ docker exec -i -t CONTAINER /bin/bash # open a console in a running container
+$ docker images # list local images
+$ docker ps -a # list local containers
+$ docker ps -aq | xargs docker rm # delete all local containers
+$ docker rmi IMAGE # delete an image
+$ docker attach CONTAINER # attach to running container
+> Ctrl + p + Ctrl + q # if container was ran with docker run -i -t, then detach
+```
+
+## Anaconda
+```
+$ conda env list # list environments
+$ conda create --name py27 python=2.7 anaconda # create an python 2.7 env called py27
+$ conda remove --name ENV_NAME --all # remove an env
+$ source activate ENV_NAME # change to (activate) an env
+$ source deactivate # deactivate current env
 ```

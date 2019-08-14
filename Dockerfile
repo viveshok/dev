@@ -1,6 +1,6 @@
 
 FROM centos:latest
-MAINTAINER Alexandre Beaulne <alexandre.beaulne@gmail.com>
+MAINTAINER Alexandre Beaulne <alex@mgnr.io>
 
 RUN yum -y update
 RUN yum groupinstall -y development
@@ -18,11 +18,10 @@ WORKDIR /home/user/
 
 ADD .vimrc /home/user/
 ADD .tmux.conf /home/user/
-ADD Anaconda3-2.5.0-Linux-x86_64.sh /home/user/
 
-RUN bash /home/user/Anaconda3-2.5.0-Linux-x86_64.sh -b
-RUN echo "export PATH=\"/home/user/anaconda3/bin:$PATH\" >> /home/user/.bashrc
-RUN /home/user/anaconda3/bin/conda create --yes --name py27 python=2.7 anaconda
+RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+RUN bash Miniconda3-latest-Linux-x86_64.sh -b
+RUN echo 'export PATH="~/miniconda3/bin:$PATH"' >> ~/.bashrc
 
 CMD [ "/bin/bash" ]
 
