@@ -6,32 +6,27 @@ sudo apt-get install git
 sudo apt-get install vim
 sudo apt-get install tmux
 sudo apt-get install curl
-sudo apt-get install gtk2.0 # dependency of ledger
 sudo apt-get install scrot # screenshots
 sudo apt-get install mosh # mobile shell
 sudo apt-get install acpi # check battery power
 sudo apt-get install rlwrap # rlwrap runs the specified command, intercepting user input in order to provide readline's line editing, persistent history and completion
+sudo apt-get install gtk2.0 # dependency of ledger
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
 echo 'pinentry-program /usr/bin/pinentry-curses' >> ~/.gnupg/gpg-agent.conf
 gpg-connect-agent reloadagent /bye
 
-# Anaconda
-wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
-bash Anaconda3-4.3.1-Linux-x86_64.sh -b
-echo 'export PATH="/home/abeaulne/anaconda3/bin:$PATH"' >> ~/.bashrc
+# Miniconda
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh -b
+echo 'export PATH="~/miniconda3/bin:$PATH"' >> ~/.bashrc
 
 # AWS
 pip install awscli
 
 # install docker
-sudo apt-get -y install apt-transport-https ca-certificates
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-RELEASE=$(lsb_release -cs)
-REPO="deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE edge"
-sudo add-apt-repository "$REPO"
-sudo apt-get update
-sudo apt-get -y install docker-ce
+bash get-docker.sh
+sudo usermod -aG docker abeaulne
 sudo docker run hello-world
 
