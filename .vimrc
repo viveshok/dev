@@ -154,11 +154,6 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 "------------------------------------------------------------
 
-" Racket specific settings
-if has("autocmd")
-    au BufReadPost *.rkt,*.rktl set filetype=scheme
-endif
-
 " start scrolling before cursor reaches top or bottom of screen
 set scrolloff=12
 
@@ -167,14 +162,6 @@ set fileformat=unix
 set fileformats=unix,dos
 
 set tabpagemax=50
-
-" Golang syntax highlighting
-" Clear filetype flags before changing runtimepath to force Vim to reload them.
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
 
 " use jk for escape
 :imap jk <Esc>

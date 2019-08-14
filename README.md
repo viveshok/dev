@@ -90,6 +90,7 @@ $ docker build -f Dockerfile.datascience --tag="abeaulne/datascience" . # build 
 $ docker login # login to dockerhub
 $ docker push abeaulne/datascience # push an image to dockerhub
 $ docker run -i -t IMAGE /bin/bash # launch a container in interative bash mode
+$ docker run  --mount 'type=volume,src=<VOLUME-NAME>,dst=<CONTAINER-PATH>' # mirror volume in container
 $ docker stop CONTAINER # stop container
 $ docker exec -i -t CONTAINER /bin/bash # open a console in a running container
 $ docker images # list local images
