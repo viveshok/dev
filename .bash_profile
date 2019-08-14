@@ -11,6 +11,5 @@ export EDITOR="$VISUAL"
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-alias vim='vim -p'  # open multiple files in different tab
-alias julia='julia --project'  # launch Julia in local environment
+alias vim='vim -p'  # open multiple files in different tabs
 
