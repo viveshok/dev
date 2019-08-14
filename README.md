@@ -89,15 +89,17 @@ $ sudo modprobe -r psmouse # reset laptop trackpad
 $ docker build -f Dockerfile.datascience --tag="abeaulne/datascience" . # build an image from specified Dockerfile
 $ docker login # login to dockerhub
 $ docker push abeaulne/datascience # push an image to dockerhub
-$ docker run -i -t IMAGE /bin/bash # launch a container in interative bash mode
-$ docker run  --mount 'type=volume,src=<VOLUME-NAME>,dst=<CONTAINER-PATH>' # mirror volume in container
-$ docker stop CONTAINER # stop container
-$ docker exec -i -t CONTAINER /bin/bash # open a console in a running container
+$ docker run -i -t <IMAGE> /bin/bash # launch a container in interative bash mode
+$ docker run --name <CONTAINER_NAME> <IMAGE> # specify name a container
+$ docker run -w <WORKING_DIR> <IMAGE> # specify working directory of container at launch
+$ docker run  -v <SRC>:<DST> <IMAGE> # mirror volume inside container
+$ docker stop <CONTAINER> # stop container
+$ docker exec -i -t <CONTAINER> /bin/bash # open a console in a running container
 $ docker images # list local images
 $ docker ps -a # list local containers
-$ docker ps -aq | xargs docker rm # delete all local containers
-$ docker rmi IMAGE # delete an image
-$ docker attach CONTAINER # attach to running container
+$ docker rm $(docker ps -a -q) # delete all stopped containers
+$ docker rmi <IMAGE> # delete an image
+$ docker attach <CONTAINER> # attach to running container
 > Ctrl + p + Ctrl + q # if container was ran with docker run -i -t, then detach
 ```
 
