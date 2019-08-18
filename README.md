@@ -92,7 +92,9 @@ $ docker push abeaulne/datascience # push an image to dockerhub
 $ docker run -i -t <IMAGE> /bin/bash # launch a container in interative bash mode
 $ docker run --name <CONTAINER_NAME> <IMAGE> # specify name a container
 $ docker run -w <WORKING_DIR> <IMAGE> # specify working directory of container at launch
-$ docker run  -v <SRC>:<DST> <IMAGE> # mirror volume inside container
+$ docker run -v <SRC>:<DST> <IMAGE> # mirror volume inside container
+$ docker run -e ENV_VAR1 --env ENV_VAR2 <IMAGE> # set environment variables
+$ docker run -p 8080:80 <IMAGE> # map TCP port 80 in the container to port 8080 on the Docker host.
 $ docker stop <CONTAINER> # stop container
 $ docker exec -i -t <CONTAINER> /bin/bash # open a console in a running container
 $ docker images # list local images
