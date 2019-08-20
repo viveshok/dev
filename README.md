@@ -72,7 +72,7 @@ $ sudo umount /media/usb
 $ gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=finished.pdf file1.pdf file2.pdf
 ```
 
-## miscellaneous bash
+## miscellaneous
 ```
 $ find . -name "*.pyc" -delete # remove all files in subdirectories with extension pyc
 $ sudo shutdown -time now # shutdown computer
@@ -82,6 +82,7 @@ $ cat /proc/meminfo # find out about the machine RAM
 $ df -h # get disk usage
 $ du -h filename # get file or directory size
 $ sudo modprobe -r psmouse # reset laptop trackpad
+<prefix> D  # kick out users out of TMUX session
 ```
 
 ## Docker
