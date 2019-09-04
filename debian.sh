@@ -10,6 +10,7 @@ sudo apt-get install scrot # screenshots
 sudo apt-get install mosh # mobile shell
 sudo apt-get install acpi # check battery power
 sudo apt-get install rlwrap
+sudo apt-get install xclip # pipe stuff in clipboard
 sudo apt-get install gtk2.0 # dependency of ledger
 
 echo 'source ~/.bash_profile' >> ~/.bashrc

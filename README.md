@@ -83,6 +83,9 @@ $ df -h # get disk usage
 $ du -h filename # get file or directory size
 $ sudo modprobe -r psmouse # reset laptop trackpad
 <prefix> D  # kick out users out of TMUX session
+$ cat some_file.txt | xclip # copy stuff in clipboard
+$ xclip -o # paste stuff from clipboard
+$ cat some_file.txt | xclip -selection clipboard # copy stuff in clipboard to use outside shell
 ```
 
 ## Docker
