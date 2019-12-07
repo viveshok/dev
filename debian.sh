@@ -17,6 +17,7 @@ sudo apt-get install htop
 sudo apt-get install texlive-latex-base # LaTeX
 #sudo apt-get install gtk2.0 # dependency of ledger
 #sudo apt-get install mbpfan # macbook fan mgmt
+#sudo apt-get install wamerican # dictionary in /usr/share/dict/words
 
 echo 'source ~/.bash_profile' >> ~/.bashrc
 
