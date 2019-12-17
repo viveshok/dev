@@ -86,6 +86,7 @@ $ sudo modprobe -r psmouse # reset laptop trackpad
 $ cat some_file.txt | xclip # copy stuff in clipboard
 $ xclip -o # paste stuff from clipboard
 $ cat some_file.txt | xclip -selection clipboard # copy stuff in clipboard to use outside shell
+$ grep -e '^[a-z]\{4,6\}$' /usr/share/dict/words | grep -v "'" | sort -R | head -n 25 # get random 4 to 6 letter words
 ```
 
 ## Docker
