@@ -67,8 +67,9 @@ $ sudo mount /dev/sdb1 /media/usb
 $ sudo umount /media/usb
 ```
 
-## joining PDFs
+## spliting or joining PDFs
 ```
+$ gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=output.pdf -dFirstPage=34 -dLastPage=46 input.pdf
 $ gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=finished.pdf file1.pdf file2.pdf
 ```
 
