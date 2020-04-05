@@ -2,7 +2,6 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PS1="\W $ "
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -12,4 +11,6 @@ HISTSIZE=10000
 HISTFILESIZE=20000
 
 alias vim='vim -p'  # open multiple files in different tabs
+alias q='rlwrap ~/q/l64/q'
 
+export PS1="\W $ "
