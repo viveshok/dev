@@ -19,8 +19,6 @@ sudo apt-get install htop
 #sudo apt-get install mbpfan # macbook fan mgmt
 #sudo apt-get install wamerican # dictionary in /usr/share/dict/words
 
-echo 'source ~/.bash_profile' >> ~/.bashrc
-
 echo 'pinentry-program /usr/bin/pinentry-curses' >> ~/.gnupg/gpg-agent.conf
 gpg-connect-agent reloadagent /bye
 

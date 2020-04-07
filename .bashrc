@@ -45,7 +45,23 @@ if ! shopt -oq posix; then
   fi
 fi
 
+xsetroot -solid midnightblue # blue background
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export PS1="\W $ "
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=10000
+HISTFILESIZE=20000
+
+alias vim='vim -p'  # open multiple files in different tabs
+alias q='rlwrap ~/q/l64/q'
+
 export PATH="/home/abeaulne/miniconda3/bin:$PATH"
-source /home/abeaulne/.bash_profile
 PATH=$PATH:$HOME/bin
 MANPATH=$MANPATH:$HOME/share/man
