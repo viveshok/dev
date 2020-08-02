@@ -24,7 +24,6 @@ myAdditionalKeys =
 
 main = do
     xmonad $ defaultConfig { startupHook = setWMName "LG3D",
-                             terminal = "xterm",
                              workspaces = myWorkspaces,
                              modMask = myModMask,
 			     borderWidth = 2
