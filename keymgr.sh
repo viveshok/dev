@@ -36,7 +36,7 @@ elif [ $ACTION == 'set' ]; then
         KEY=`< /dev/urandom tr -dc A-Z-a-z-0-9 | head -c25`
     fi
     gpg --passphrase $PASSWORD --batch --yes --decrypt $VAULT > $CACHE_FILE
-    MSG="Key for '$KEYWORD' is '$KEY'"
+    MSG="$KEYWORD,$KEY"
     echo $MSG | tee --append $CACHE_FILE
     gpg --passphrase $PASSWORD --batch --yes --symmetric --output $VAULT $CACHE_FILE
     rm --verbose $CACHE_FILE
