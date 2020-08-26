@@ -7,8 +7,6 @@ AWS_URI="s3://filevault/vault.gpg"
 SYNOPSIS="Synopsis: $ bash keymgr.sh (get|set|edit) [KEYWORD]"
 ACTION=$1
 KEYWORD=$2
-RANDOM_WORD=`awk -v lineno="$RANDOM" 'lineno==NR{print;exit}' /usr/share/dict/words`
-CACHE_FILE=".${RANDOM_WORD,,}.tmp"
 
 if [ ! -e $VAULT ]; then
     echo "Cannot find vault file '$VAULT'!"
@@ -35,19 +33,14 @@ elif [ $ACTION == 'set' ]; then
     if [ -z $KEY ]; then
         KEY=`< /dev/urandom tr -dc A-Z-a-z-0-9 | head -c25`
     fi
-    gpg --passphrase $PASSWORD --batch --yes --decrypt $VAULT > $CACHE_FILE
-    MSG="$KEYWORD,$KEY"
-    echo $MSG | tee --append $CACHE_FILE
-    gpg --passphrase $PASSWORD --batch --yes --symmetric --output $VAULT $CACHE_FILE
-    rm --verbose $CACHE_FILE
-    rm --verbose --force .*.tmp
+    echo "Setting $KEYWORD secret to $KEY"
+    echo "$(gpg --passphrase $PASSWORD --batch --yes --decrypt $VAULT)"$'\n'"$KEYWORD,$KEY" |
+        gpg --passphrase $PASSWORD --batch --yes --symmetric --output $VAULT
     aws s3 cp $VAULT $AWS_URI
 elif [ $ACTION == 'edit' ]; then
-    gpg --passphrase $PASSWORD --batch --yes --decrypt $VAULT > $CACHE_FILE
-    vim $CACHE_FILE
-    gpg --passphrase $PASSWORD --batch --yes --symmetric --output $VAULT $CACHE_FILE
-    rm --verbose $CACHE_FILE
-    rm --verbose --force .*.tmp
+    gpg --passphrase $PASSWORD --batch --yes --decrypt $VAULT |
+        vipe |
+        gpg --passphrase $PASSWORD --batch --yes --symmetric --output $VAULT
     aws s3 cp $VAULT $AWS_URI
 else
     echo $SYNOPSIS
