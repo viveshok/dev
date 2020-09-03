@@ -10,6 +10,7 @@ sudo apt-get install tmux
 sudo apt-get install curl
 #sudo apt-get install scrot # screenshots
 sudo apt-get install flameshot # screenshots
+#sudo apt install simplescreenrecorder # screen recordings
 sudo apt-get install mosh # mobile shell
 sudo apt-get install acpi # check battery power
 sudo apt-get install rlwrap
