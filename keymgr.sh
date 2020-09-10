@@ -3,7 +3,7 @@
 set -e
 
 VAULT=~/vault.gpg
-AWS_URI="s3://filevault/vault.gpg"
+#AWS_URI="s3://filevault/vault.gpg"
 SYNOPSIS="Synopsis: $ bash keymgr.sh (get|set|edit) [KEYWORD]"
 ACTION=$1
 KEYWORD=$2
@@ -41,14 +41,14 @@ elif [ $ACTION == 'set' ]; then
     gpg --passphrase $PASSWORD --batch --yes --symmetric --output $VAULT $CACHE_FILE
     rm --verbose $CACHE_FILE
     rm --verbose --force .*.tmp
-    aws s3 cp $VAULT $AWS_URI
+    #aws s3 cp $VAULT $AWS_URI
 elif [ $ACTION == 'edit' ]; then
     gpg --passphrase $PASSWORD --batch --yes --decrypt $VAULT > $CACHE_FILE
     vim $CACHE_FILE
     gpg --passphrase $PASSWORD --batch --yes --symmetric --output $VAULT $CACHE_FILE
     rm --verbose $CACHE_FILE
     rm --verbose --force .*.tmp
-    aws s3 cp $VAULT $AWS_URI
+    #aws s3 cp $VAULT $AWS_URI
 else
     echo $SYNOPSIS
 fi
