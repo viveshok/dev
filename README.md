@@ -75,7 +75,6 @@ $ gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=finished.pdf file1.pdf 
 
 ## miscellaneous
 ```
-$ find . -name "*.pyc" -delete # remove all files in subdirectories with extension pyc
 $ sudo shutdown -time now # shutdown computer
 $ ln -s real_path sym_path # create symbolic link
 $ cat /proc/cpuinfo # find out about the machine CPUs
@@ -94,13 +93,13 @@ $ cat /sys/class/power_supply/BAT0/capacity  # check laptop battery
 ## Docker
 ```
 $ docker build -f Dockerfile.datascience --tag="abeaulne/datascience" . # build an image from specified Dockerfile
+$ docker build --build-arg FOO=BAR --tag image_name . # populate dockerfile env var
 $ docker login # login to dockerhub
 $ docker push abeaulne/datascience # push an image to dockerhub
 $ docker run -i -t <IMAGE> /bin/bash # launch a container in interative bash mode
 $ docker run --name <CONTAINER_NAME> <IMAGE> # specify name a container
-$ docker run -w <WORKING_DIR> <IMAGE> # specify working directory of container at launch
 $ docker run -v <SRC>:<DST> <IMAGE> # mirror volume inside container
-$ docker run -e ENV_VAR1 --env ENV_VAR2 <IMAGE> # set environment variables
+$ docker run -e FOO=BAR --env BAZ=QUUX <IMAGE> # set environment variables
 $ docker run -p 8080:80 <IMAGE> # map TCP port 80 in the container to port 8080 on the Docker host.
 $ docker stop <CONTAINER> # stop container
 $ docker exec -i -t <CONTAINER> /bin/bash # open a console in a running container
