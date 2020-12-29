@@ -49,9 +49,6 @@ set hidden
 " set confirm
 " set autowriteall
 
-" Better command-line completion
-set wildmenu
-
 " Show partial commands in the last line of the screen
 set showcmd
 
@@ -128,16 +125,11 @@ set pastetoggle=<F11>
 "
 " Indentation settings according to personal preference.
 
-" Indentation settings for using 2 spaces instead of tabs.
+" Indentation settings for usingspaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-" Indentation settings for using hard tabs for indent. Display tabs as
-" two characters wide.
-"set shiftwidth=2
-"set tabstop=2
 
 "------------------------------------------------------------
 " Mappings {{{1
@@ -166,9 +158,10 @@ set tabpagemax=50
 " use jk for escape
 :imap jk <Esc>
 
+" Better command-line completion
+set wildmenu
 " bash like tab file completion
 set wildmode=longest,list,full
-set wildmenu
 
 " Python specific settings
 autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=80 smarttab expandtab
@@ -182,8 +175,4 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
-" Automatically re-read a file if it has changed 'underneath' the editor, e.g.
-" because of Git commands
-set autoread
 
