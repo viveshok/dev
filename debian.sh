@@ -21,6 +21,8 @@ sudo apt-get install htop
 #sudo apt-get install mbpfan # macbook fan mgmt
 #sudo apt-get install wamerican # dictionary in /usr/share/dict/words
 
+#sudo snap install authy --beta  # Authy 2FA
+
 # lux : https://github.com/Ventto/lux  # for screen brighness adjusments
 
 echo 'pinentry-program /usr/bin/pinentry-curses' >> ~/.gnupg/gpg-agent.conf
