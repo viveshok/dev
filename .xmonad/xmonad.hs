@@ -6,7 +6,7 @@ import XMonad.Util.EZConfig (additionalKeys)
 
 -- mod1Mask -> left alt (option on mac)
 -- mod4Mask -> (command on mac, windows key on windows)
-myModMask = mod4Mask
+myModMask = mod1Mask
 
 myExtraWorkspaces = [(xK_F1, "F1"), (xK_F2, "F2"), (xK_F3, "F3"), (xK_F4, "F4"), (xK_F5, "F5"), (xK_F6, "F6"),
                      (xK_F7, "F7"), (xK_F8, "F8"), (xK_F9, "F9"), (xK_F10, "F10"), (xK_F11, "F11"), (xK_F12, "F12")]
