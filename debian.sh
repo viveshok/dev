@@ -16,6 +16,7 @@ sudo apt-get install acpi # check battery power
 sudo apt-get install rlwrap
 sudo apt-get install xclip # pipe stuff in clipboard
 sudo apt-get install htop
+#sudo apt-get install bluez* blueman # bluetooth stuff
 #sudo apt-get install texlive-full # LaTeX
 #sudo apt-get install gtk2.0 # dependency of ledger
 #sudo apt-get install mbpfan # macbook fan mgmt
