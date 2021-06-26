@@ -8,5 +8,5 @@ grep -Iinr $1 $2 \
     | grep -v '\.pytype' \
     | grep -v '\.svg' \
     | grep -v '\.git' \
-    | grep -v '\.html:'
-
+    | grep -v '\.html:' \
+    | grep -v '_pb2'
